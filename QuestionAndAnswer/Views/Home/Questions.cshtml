@@ -1,0 +1,50 @@
+﻿<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th class="text-center"
+                    ng-repeat="category in categories | orderBy">
+                    {{category}}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="questionsGroupByValue in questions" ng-class="cssOfTd(questionsGroupByValue[0].QuestionValue)">
+                <td class="text-center" ng-repeat="question in questionsGroupByValue | orderBy:'QuestionCategory'">
+                    <button type="button"
+                            ng-class="cssOfButton(question.QuestionValue)"
+                            ng-click="showQuestion(question)"
+                            ng-disabled="(boardLocked || question.QuestionLocked)"
+                            data-toggle="modal" data-target="#answer_dialog">
+                        {{question.QuestionValue}}
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="check-element animate-show" ng-hide="questionDialogHidden">
+    <div ng-class="cssOfPanel(selectedQuestion.QuestionValue)">
+        <div class="panel-heading">{{selectedQuestion.QuestionCategory + '題 - ' + selectedQuestion.QuestionValue + '分'}}</div>
+        <div class="panel-body">
+            <p>{{selectedQuestion.QuestionContent}}</p>
+        </div>
+
+        <ul class="list-group animate-repeat" ng-repeat="answer in selectedQuestion.Answers">
+            <li class="list-group-item">
+                <button type="button"
+                        ng-class="cssOfButton(selectedQuestion.QuestionValue)"
+                        ng-click="answerQuestion(answer)">
+                    {{answer.AnswerContent}}
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-1"><span class="label label-success">答對</span><span class="badge">{{totalCorrectedAnswer}}</span></div>
+    <div class="col-md-1"><span class="label label-danger">答錯</span><span class="badge">{{totalinCorrectedAnswer}}</span></div>
+    <div class="col-md-1"><span class="label label-info">分數</span><span class="badge">{{totalScore}}</span></div>
+</div>
+<answer-dialog>
+</answer-dialog>

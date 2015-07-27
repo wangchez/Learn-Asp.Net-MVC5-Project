@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection 應用程式在 web.config 中用來存取資料庫的連接字串。" defaultValue="Data Source=.\sqlexpress;Initial Catalog=QuestionAndAnswer;Integrated Security=True; MultipleActiveResultSets=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\USER\\Documents\\Visual\ Studio\ 2013\\Projects\\QuestionAndAnswer\\QuestionAndAnswer\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="Repository.Pattern.Ef6.DataContext-Web.config Connection String" description="Repository.Pattern.Ef6.DataContext 應用程式在 web.config 中用來存取資料庫的連接字串。" defaultValue="Repository.Pattern.Ef6.DataContext_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\USER\\Documents\\Visual\ Studio\ 2013\\Projects\\QuestionAndAnswer\\QuestionAndAnswer\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Repository.Pattern.Ef6.DataContext']/@connectionString" />
+  </parameter>
+</parameters>

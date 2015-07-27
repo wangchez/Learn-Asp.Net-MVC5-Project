@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="QuestionAndAnswer" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\USER\\Documents\\Visual\ Studio\ 2013\\Projects\\QuestionAndAnswer\\QuestionAndAnswer\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\USER\\Documents\\Visual\ Studio\ 2013\\Projects\\QuestionAndAnswer\\QuestionAndAnswer\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=.\sqlexpress;Initial Catalog=QuestionAndAnswer;Integrated Security=True; MultipleActiveResultSets=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\USER\\Documents\\Visual\ Studio\ 2013\\Projects\\QuestionAndAnswer\\QuestionAndAnswer\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="Repository.Pattern.Ef6.DataContext-Web.config Connection String" description="" value="Repository.Pattern.Ef6.DataContext_ConnectionString" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\USER\\Documents\\Visual\ Studio\ 2013\\Projects\\QuestionAndAnswer\\QuestionAndAnswer\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Repository.Pattern.Ef6.DataContext']/@connectionString" />
+  </parameter>
+</parameters>
